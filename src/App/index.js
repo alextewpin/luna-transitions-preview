@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import Dropzone from './Dropzone'
-import Preview from './Preview'
-import Transitions from './Transitions'
+import Dropzone from '../Dropzone'
+import Preview from '../Preview'
+import Transitions from '../Transitions'
 
 const GlobalStyle = createGlobalStyle`
   * {
