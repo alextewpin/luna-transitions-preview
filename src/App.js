@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import styled, { createGlobalStyle } from 'styled-components'
 
-function App() {
+import Dropzone from './Dropzone'
+import Preview from './Preview'
+import Transitions from './Transitions'
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color: black;
+  }
+`
+
+const Layout = styled.div`
+  display: flex;
+  padding: 40px;
+  & > *:not(:last-child) {
+    margin-right: 20px;
+  }
+`
+
+const App = () => {
+  const [transitionsUrl, setTransitionsUrl] = useState(
+    require('./assets/transitions.png'),
+  )
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <Dropzone onChange={setTransitionsUrl}>
+        <Layout>
+          <Preview />
+          <Transitions transitionsUrl={transitionsUrl} />
+        </Layout>
+      </Dropzone>
+    </>
+  )
 }
 
-export default App;
+export default App
