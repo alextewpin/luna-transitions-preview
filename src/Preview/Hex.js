@@ -7,7 +7,7 @@ const StyledHex = styled.div`
   width: 80px;
   height: 80px;
   position: absolute;
-  mask: url(${require('./assets/mask.png')});
+  mask: url(${require('../assets/mask.png')});
   mask-size: 100%;
   ${({ x, y }) => `
     left: ${x * 80 - (y % 2 === 0 ? 40 : 0)}px;
