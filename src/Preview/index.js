@@ -81,7 +81,7 @@ const grid = [
     },
     {
       biome: 'ground',
-      vertices: [1, 0, 0, 1, 1],
+      vertices: [1, 0, 0, 1, 1, 1],
       edges: [false, false, false, true, false, true],
     },
     {
@@ -98,7 +98,7 @@ const grid = [
   [
     {
       biome: 'water',
-      vertices: [1, 1, 2, 1],
+      vertices: [1, 1, 2, 1, 0, 1],
       edges: [false, true, true, false, false, true],
     },
     {
