@@ -245,7 +245,7 @@ const grid = [
 const StyledPreview = styled.div`
   width: 400px;
   height: 400px;
-  background-image: url(${require('./assets/background.png')});
+  background-image: url(${require('../assets/background.png')});
   background-size: 100%;
   position: relative;
   overflow: hidden;
