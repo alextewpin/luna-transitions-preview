@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import Dropzone from '../Dropzone'
-import Preview from '../Preview'
-import Transitions from '../Transitions'
-import Checkbox from '../Checkbox'
+import Dropzone from './Dropzone'
+import Preview from './Preview'
+import Transitions from './Transitions'
+import Checkbox from './Checkbox'
 
 const GlobalStyle = createGlobalStyle`
   * {
